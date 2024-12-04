@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class PlayerMovmentTwo : MonoBehaviour
+public class PlayerMovment : MonoBehaviour
 {
     private Rigidbody2D _rigRigidbody2D;
     private PlayerDialogue _playerDialogue;
@@ -22,7 +22,7 @@ public class PlayerMovmentTwo : MonoBehaviour
     {
 
         _xVelocity = Input.GetAxis("Horizontal");
-        _yVelocity = Input.GetAxis(Structs.Input.vertical);
+        _yVelocity = Input.GetAxis("Vertical");
 
         
         _rigRigidbody2D.velocity = new Vector2(_xVelocity, _yVelocity) * speed; 

@@ -21,8 +21,8 @@ public class PlayerMovmentTwo : MonoBehaviour
     void Update()
     {
 
-        _xVelocity = Input.GetAxis("Horizontal");
-        _yVelocity = Input.GetAxis(Structs.Input.vertical);
+        _xVelocity = Input.GetAxis("Horizontal2");
+        _yVelocity = Input.GetAxis("Vertical2");
 
         
         _rigRigidbody2D.velocity = new Vector2(_xVelocity, _yVelocity) * speed; 

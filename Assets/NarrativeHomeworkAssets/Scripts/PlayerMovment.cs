@@ -37,7 +37,7 @@ public class PlayerMovment : MonoBehaviour
             transform.position += Vector3.up;
 
         }
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S) && transform.position.y > -5f)
         {
             transform.position += Vector3.down;
             //_rigRigidbody2D.velocity = new Vector2(_xVelocity, _yVelocity) * speed; 

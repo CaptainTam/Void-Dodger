@@ -7,6 +7,7 @@ public class PlayerMovmentTwo : MonoBehaviour
 {
     private Rigidbody2D _rigRigidbody2D;
     private PlayerDialogue _playerDialogue;
+    public Transform playerTransform;
     private float _xVelocity = 0f;
     private float _yVelocity = 0f;
     public float speed = 3;
@@ -22,20 +23,20 @@ public class PlayerMovmentTwo : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            transform.position += Vector3.left;
+            playerTransform.position += Vector3.left;
         }
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            transform.position += Vector3.right;
+            playerTransform.position += Vector3.right;
         }
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            transform.position += Vector3.up;
+            playerTransform.position += Vector3.up;
 
         }
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            transform.position += Vector3.down;
+            playerTransform.position += Vector3.down;
             //_rigRigidbody2D.velocity = new Vector2(_xVelocity, _yVelocity) * speed; 
         }
 

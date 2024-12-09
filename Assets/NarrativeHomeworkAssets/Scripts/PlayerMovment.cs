@@ -7,16 +7,16 @@ public class PlayerMovment : MonoBehaviour
 {
     private Rigidbody2D _rigRigidbody2D;
     private PlayerDialogue _playerDialogue;
+    public Transform playerTransform;
     private float _xVelocity = 0f;
     private float _yVelocity = 0f;
     public float speed = 3;
-    public float walkTime;
-    private float walkTimer;
+   
 
     // Start is called before the first frame update
     void Start()
     {
-        walkTimer = 0;
+       
         _rigRigidbody2D = GetComponent<Rigidbody2D>();
     }
 
@@ -26,20 +26,20 @@ public class PlayerMovment : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.A))
         {
-            transform.position += Vector3.left;
+            playerTransform.position += Vector3.left;
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
-            transform.position += Vector3.right;
+            playerTransform.position += Vector3.right;
         }
         if (Input.GetKeyDown(KeyCode.W))
         {
-            transform.position += Vector3.up;
+            playerTransform.position += Vector3.up;
 
         }
         if (Input.GetKeyDown(KeyCode.S) && transform.position.y > -5f)
         {
-            transform.position += Vector3.down;
+            playerTransform.position += Vector3.down;
             //_rigRigidbody2D.velocity = new Vector2(_xVelocity, _yVelocity) * speed; 
         }
     }

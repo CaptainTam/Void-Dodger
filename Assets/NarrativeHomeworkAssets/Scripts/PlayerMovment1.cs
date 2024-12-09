@@ -20,11 +20,25 @@ public class PlayerMovmentTwo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            transform.position += Vector3.left;
+        }
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            transform.position += Vector3.right;
+        }
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            transform.position += Vector3.up;
 
-        _xVelocity = Input.GetAxis("Horizontal2");
-        _yVelocity = Input.GetAxis("Vertical2");
+        }
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            transform.position += Vector3.down;
+            //_rigRigidbody2D.velocity = new Vector2(_xVelocity, _yVelocity) * speed; 
+        }
 
-        
         _rigRigidbody2D.velocity = new Vector2(_xVelocity, _yVelocity) * speed; 
     }
 }

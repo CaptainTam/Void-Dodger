@@ -24,22 +24,23 @@ public class PlayerMovment : MonoBehaviour
     void Update()
     {
 
-        _xVelocity = Input.GetAxis("Horizontal");
-        _yVelocity = Input.GetAxis("Vertical");
-
-
-        if(_xVelocity == -1)
+        if (Input.GetKeyDown(KeyCode.A))
         {
-
-            if(walkTimer <= 0)
-            {
-                transform.position += (Vector3) Vector2.left * 1.2f;
-                walkTimer = walkTime;
-            }
-
-           walkTimer -= Time.deltaTime;
+            transform.position += Vector3.left;
         }
-        
-        //_rigRigidbody2D.velocity = new Vector2(_xVelocity, _yVelocity) * speed; 
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            transform.position += Vector3.right;
+        }
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            transform.position += Vector3.up;
+
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            transform.position += Vector3.down;
+            //_rigRigidbody2D.velocity = new Vector2(_xVelocity, _yVelocity) * speed; 
+        }
     }
 }

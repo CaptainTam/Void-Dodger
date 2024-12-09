@@ -26,20 +26,20 @@ public class PlayerMovment : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.A))
         {
-            playerTransform.position += Vector3.left;
+            transform.position += Vector3.left;
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
-            playerTransform.position += Vector3.right;
+            transform.position += Vector3.right;
         }
         if (Input.GetKeyDown(KeyCode.W))
         {
-            playerTransform.position += Vector3.up;
+            transform.position += Vector3.up;
 
         }
         if (Input.GetKeyDown(KeyCode.S) && transform.position.y > -5f)
         {
-            playerTransform.position += Vector3.down;
+            transform.position += Vector3.down;
             //_rigRigidbody2D.velocity = new Vector2(_xVelocity, _yVelocity) * speed; 
         }
     }

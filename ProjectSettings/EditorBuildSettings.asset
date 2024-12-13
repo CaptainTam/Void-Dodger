@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Void Dodger/Prefab/Scenes/Main Menu.unity
-    guid: 7a52e0ae60ffb9f4b92a12937624cfa2
+    path: Assets/Void Dodger/Scenes/MenuLevel.unity
+    guid: 1ae7bb5af9db54b43b188b7575fc802f
   - enabled: 1
-    path: Assets/Void Dodger/Prefab/Scenes/SampleScene.unity
-    guid: adbfa14619439374db34a69a4cab8fa9
+    path: Assets/Void Dodger/Scenes/SampleScene.unity
+    guid: 5238b3c98f95d9b498632290dd588563
+  - enabled: 1
+    path: Assets/Void Dodger/Scenes/EndGame.unity
+    guid: 9194a4b5c6e9f8a4b924379ae168a43c
   m_configObjects: {}

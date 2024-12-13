@@ -1,9 +1,8 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerDie : MonoBehaviour
 {
-    // Game Object 
-    public GameObject canvas;
     // Tag 
     private string Enemy = "Enemy";
 
@@ -13,8 +12,9 @@ public class PlayerDie : MonoBehaviour
         if(collision.gameObject.tag == Enemy)
         {
             // Turn on the canvas and turn off the player game object 
-            canvas.gameObject.SetActive(true);
             gameObject.SetActive(false);
+            SceneManager.LoadScene("EndGame");
+
         }
     }
 
